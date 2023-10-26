@@ -1,0 +1,44 @@
+.section-info {
+  width: 100%;
+  height: 32rem;
+  grid-template-columns: 38fr 62fr;
+  gap: 4.5%;
+}
+.section-info .section-info__current {
+  gap: 14.5%;
+}
+.section-info .section-info__current .section-info__current__general {
+  height: 60%;
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 18px;
+}
+.section-info .section-info__current .section-info__current__rainfall {
+  height: 25.5%;
+  width: 100%;
+  padding: 0 3.2rem;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 18px;
+}
+.section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__value p,
+.section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__percentage p {
+  font-size: 2rem;
+}
+.section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__value .title,
+.section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__percentage .title {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__percentage {
+  text-align: right;
+}
+.section-info .section-info__forecast {
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 18px;
+}
+
+/*# sourceMappingURL=sectionInfo.css.map */
