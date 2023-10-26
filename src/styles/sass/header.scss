@@ -1,0 +1,68 @@
+.header {
+    width: 100%;
+
+    padding: 2.4rem 0;
+
+    justify-content: space-between;
+
+    .header-title {
+        color: var(--primary);
+
+        font-size: 3rem;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+
+        width: 29.5rem;
+
+        border: 1px solid var(--primary);
+        border-radius: 7px;
+
+        transition: all 0.15s ease-in-out;
+
+        margin-right: 6.4rem;
+    }
+
+    form:focus-within {
+        box-shadow: 0 0 0 1px var(--primary);
+    }
+
+    input {
+        padding: 1rem 1.15rem;
+        font-size: 1.2rem;
+
+        width: 100%;
+
+        border: none;
+
+        background-color: transparent;
+    }
+
+    input::placeholder {
+        color: var(--primary);
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        padding: 0.4rem 1.15rem;
+
+        background-color: transparent;
+        color: var(--primary);
+
+        border: none;
+        border-left: 1px solid transparent;
+
+        cursor: pointer;
+
+        transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+        border-left: 1px solid var(--primary);
+    }
+}

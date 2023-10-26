@@ -1,0 +1,132 @@
+:root {
+    --primary: #0099ff;
+    --secondary: #8ad6ff;
+    --background: #fff;
+
+    --text: #2f3542;
+
+    --clear-primary: ##ff8a9c;
+    --clear-secondary: ##fffdea;
+    --clear-bg: #fff;
+
+    --clouds-primary: #f1f2f6;
+    --clouds-secondary: #2f3542;
+    --clouds-bg: #f1f2f6;
+
+    --rain-primary: #f1f2f6;
+    --rain-secondary: #2f3542;
+    --rain-bg: #f9f8fe;
+
+    --thunderstorm-primary: #f1f2f6;
+    --thunderstorm-secondary: #2f3542;
+    --thunderstorm-bg: #f1f2f6;
+
+    --snow-primary: #f1f2f6;
+    --snow-secondary: #2f3542;
+    --snow-bg: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    font-family: "Roboto", sans-serif;
+
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    background-color: var(--background);
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    max-width: 100vw;
+    min-height: 100svh;
+}
+
+/* Utilities */
+
+.container {
+    max-width: 125rem;
+
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    height: 100vh;
+
+    padding: 0 6.4rem 6.4rem;
+
+    justify-content: flex-start;
+}
+
+.app-container.clear {
+    --primary: #ef8393;
+    --secondary: ##fffdea;
+    --background: #fff;
+}
+
+.app-container.clouds {
+    --primary: #f1f2f6;
+    --secondary: #2f3542;
+    --background: #f1f2f6;
+}
+
+.app-container.rain {
+    --primary: #f1f2f6;
+    --secondary: #2f3542;
+    --background: #f9f8fe;
+}
+
+.app-container.thunderstorm {
+    --primary: #f1f2f6;
+    --secondary: #2f3542;
+    --background: #f1f2f6;
+}
+
+.app-container.snow {
+    --primary: #f1f2f6;
+    --secondary: #2f3542;
+    --background: #fff;
+}
