@@ -94,9 +94,10 @@ body {
 }
 
 .app-container {
-    min-height: 100vh;
+    min-height: 100svh;
 
     padding: 0 6.4rem;
+    margin-bottom: 6.4rem;
 
     justify-content: flex-start;
 }
