@@ -18,7 +18,7 @@ function App() {
         <OWProvider setFetched={setIsDataFetched}>
             {isDataFetched && (
                 <>
-                    <main className="app-container container flex flex-column flex-center clear">
+                    <main className="app-container container flex flex-column flex-center ">
                         <Header />
                         <CurrentSection />
                         <InfoSection />
