@@ -13,7 +13,7 @@ function Header({ className }) {
     };
 
     return (
-        <div
+        <header
             className={`header flex flex-center ${className ? className : ""}`}
         >
             <h1 className="header-title">PreciWeather</h1>
@@ -26,7 +26,7 @@ function Header({ className }) {
                 />
                 <button type="submit">🔍</button>
             </form>
-        </div>
+        </header>
     );
 }
 
