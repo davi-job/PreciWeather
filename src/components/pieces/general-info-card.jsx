@@ -42,9 +42,7 @@ function GeneralInfoCard() {
                 <div className="section-info-general__info-card grid">
                     <p className="info-card__icon">😎</p>
                     <p className="info-card__title">UV Index</p>
-                    <p className="info-card__value">
-                        {OWData.current.uvi} of 10
-                    </p>
+                    <p className="info-card__value">{OWData.current.uvi}</p>
                 </div>
             </div>
 

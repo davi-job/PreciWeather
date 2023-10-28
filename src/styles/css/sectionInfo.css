@@ -30,6 +30,7 @@
 .section-info .section-info__current .section-info__current__general .section-info-general__column .section-info-general__info-card .info-card__icon {
   grid-row: span 2;
   font-size: 2.4rem;
+  justify-self: center;
 }
 .section-info .section-info__current .section-info__current__general .section-info-general__column .section-info-general__info-card .info-card__title,
 .section-info .section-info__current .section-info__current__general .section-info-general__column .section-info-general__info-card .info-card__value {
@@ -73,11 +74,19 @@
   height: 100%;
   width: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 60fr 40fr;
+  gap: 2.4rem;
   justify-items: center;
   align-items: center;
   border: 1px solid var(--primary);
   border-radius: 18px;
+}
+.section-info .section-info__forecast .temp-graph-section {
+  width: 100%;
+}
+.section-info .section-info__forecast .temp-graph-section .temp-graph-section__title {
+  font-size: 1.2rem;
+  margin: 1.6rem 0 -1rem 3.5rem;
 }
 .section-info .section-info__forecast .daily-forecast__list {
   list-style-type: none;
@@ -114,7 +123,7 @@
   height: 60%;
   width: 100%;
   border-right: 1px solid var(--primary);
-  opacity: 0.35;
+  opacity: 0.2;
 }
 .section-info .section-info__forecast .daily-forecast__list .daily-forecast__item:last-of-type {
   padding-right: 0;
