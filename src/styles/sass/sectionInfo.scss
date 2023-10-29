@@ -12,9 +12,60 @@
             height: 60%;
             width: 100%;
 
+            justify-items: center;
+            align-items: center;
+
             border: 1px solid var(--primary);
 
             border-radius: 18px;
+
+            .section-info-general__column {
+                gap: 4.2rem;
+
+                justify-self: start;
+
+                padding: 1.2rem 0 1.2rem 4.2rem;
+
+                .section-info-general__info-card {
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+
+                    column-gap: 1.2rem;
+                    row-gap: 0.2rem;
+
+                    align-items: center;
+
+                    .info-card__icon {
+                        grid-row: span 2;
+
+                        font-size: 2.4rem;
+
+                        justify-self: center;
+                    }
+
+                    .info-card__title,
+                    .info-card__value {
+                        grid-column: span 2;
+                    }
+
+                    .info-card__title {
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+
+                    .info-card__value {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .section-info-general__column:first-of-type {
+                border-right: 1px solid var(--primary);
+                padding: 1.2rem 4.2rem 1.2rem 0;
+
+                justify-self: end;
+            }
         }
 
         .section-info__current__rainfall {
@@ -52,8 +103,83 @@
         height: 100%;
         width: 100%;
 
+        grid-template-columns: 1fr;
+        grid-template-rows: 60fr 40fr;
+
+        gap: 2.4rem;
+
+        justify-items: center;
+        align-items: center;
+
         border: 1px solid var(--primary);
 
         border-radius: 18px;
+
+        .temp-graph-section {
+            width: 100%;
+
+            .temp-graph-section__title {
+                font-size: 1.2rem;
+                margin: 1.6rem 0 -1rem 3.5rem;
+            }
+        }
+
+        .daily-forecast__list {
+            list-style-type: none;
+
+            gap: 2.2rem;
+
+            text-align: center;
+
+            .daily-forecast__item {
+                position: relative;
+
+                gap: 0.8rem;
+
+                padding-right: 1.9rem;
+
+                .daily-forecast__item__icon {
+                    font-size: 2.4rem;
+                }
+
+                .daily-forecast__item__temp {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+
+                    gap: 0.6rem;
+
+                    .daily-forecast__item__temp__min {
+                        opacity: 0.75;
+                    }
+                }
+            }
+
+            .daily-forecast__item::before {
+                content: "";
+                display: block;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                z-index: -1;
+
+                height: 60%;
+                width: 100%;
+
+                border-right: 1px solid var(--primary);
+
+                opacity: 0.2;
+            }
+
+            .daily-forecast__item:last-of-type {
+                padding-right: 0;
+            }
+
+            .daily-forecast__item:last-of-type::before {
+                border-right: none;
+            }
+        }
     }
 }

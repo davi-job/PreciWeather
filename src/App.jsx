@@ -1,3 +1,6 @@
+import { OWProvider } from "./contexts/OWContext.jsx";
+import { useState } from "react";
+
 import "./styles/css/index.css";
 
 import "./styles/css/header.css";
@@ -9,14 +12,21 @@ import CurrentSection from "./components/section-current";
 import InfoSection from "./components/section-info";
 
 function App() {
+    const [isDataFetched, setIsDataFetched] = useState(false);
+
     return (
-        <>
-            <div className="app-container container flex flex-column flex-center clear">
-                <Header />
-                <CurrentSection />
-                <InfoSection />
-            </div>
-        </>
+        <OWProvider setFetched={setIsDataFetched}>
+            {isDataFetched && (
+                <>
+                    <main className="app-container container flex flex-column flex-center ">
+                        <Header />
+                        <CurrentSection />
+                        <InfoSection />
+                        <p className="ow-tag">Data from openweathermap.org</p>
+                    </main>
+                </>
+            )}
+        </OWProvider>
     );
 }
 

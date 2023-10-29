@@ -14,7 +14,6 @@
   border: 1px solid var(--primary);
   border-radius: 7px;
   transition: all 0.15s ease-in-out;
-  margin-right: 6.4rem;
 }
 .header form:focus-within {
   box-shadow: 0 0 0 1px var(--primary);
@@ -33,13 +32,19 @@
   outline: none;
 }
 .header button {
-  padding: 0.4rem 1.15rem;
+  padding: 0.2rem 1.15rem;
   background-color: transparent;
   color: var(--primary);
   border: none;
   border-left: 1px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+.header button img {
+  width: 2rem;
+  height: 2rem;
 }
 .header button:hover {
   border-left: 1px solid var(--primary);

@@ -13,7 +13,7 @@ function Header({ className }) {
     };
 
     return (
-        <div
+        <header
             className={`header flex flex-center ${className ? className : ""}`}
         >
             <h1 className="header-title">PreciWeather</h1>
@@ -24,9 +24,14 @@ function Header({ className }) {
                     value={searchValue}
                     onChange={handleSearchChange}
                 />
-                <button type="submit">🔍</button>
+                <button type="submit">
+                    <img
+                        src="src\Assets\SVG\magnifying_glass_tilted_left_flat.svg"
+                        alt="magnifying glass icon"
+                    />
+                </button>
             </form>
-        </div>
+        </header>
     );
 }
 

@@ -14,7 +14,7 @@
 
     margin-bottom: 6rem;
 
-    img {
+    .section-current__bg {
         position: absolute;
         top: 0;
         left: 0;
@@ -32,6 +32,8 @@
 
         .section-current__content__icon {
             font-size: 3.2rem;
+            width: 3.2rem;
+            height: 3.2rem;
 
             margin-left: 0.8rem;
 

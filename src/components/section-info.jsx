@@ -1,23 +1,24 @@
+import GeneralInfoCard from "./pieces/general-info-card.jsx";
+import RainfallInfoCard from "./pieces/rainfall-info-card.jsx";
+
+import TempGraph from "./pieces/temp-graph.jsx";
+import DailyForecast from "./pieces/daily-forecast.jsx";
+
 function InfoSection({ className }) {
     return (
-        <div className={`section-info grid ${className ? className : ""}`}>
+        <section className={`section-info grid ${className ? className : ""}`}>
             <div className="section-info__current flex flex-column">
-                <div className="section-info__current__general"></div>
+                <GeneralInfoCard />
 
-                <div className="section-info__current__rainfall flex flex-center">
-                    <div className="section-info__current__rainfall__value flex flex-column">
-                        <p className="title">Weekly Rainfall</p>
-                        <p>45mm</p>
-                    </div>
-                    <div className="section-info__current__rainfall__percentage flex flex-column">
-                        <p className="title">This Week</p>
-                        <p>-15%</p>
-                    </div>
-                </div>
+                <RainfallInfoCard />
             </div>
 
-            <div className="section-info__forecast flex flex-column"></div>
-        </div>
+            <div className="section-info__forecast grid">
+                <TempGraph />
+
+                <DailyForecast />
+            </div>
+        </section>
     );
 }
 export default InfoSection;
