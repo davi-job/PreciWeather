@@ -109,6 +109,8 @@ body {
 }
 
 .app-container {
+    position: relative;
+
     padding: 0 6.4rem;
     margin-bottom: 6.4rem;
 
@@ -143,4 +145,31 @@ body {
     --primary: #f1f2f6;
     --secondary: #2f3542;
     --background: #fff;
+}
+
+.app-cover {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--background);
+
+    overflow: hidden;
+
+    z-index: 99;
+}
+
+.fade-out {
+    animation: fade-out 0.35s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
