@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import magnifyingGlass_icon from "../Assets/SVG/magnifying_glass_tilted_left_flat.svg";
+
 function Header({ className }) {
     const [searchValue, setSearchValue] = useState("");
 
@@ -26,7 +28,7 @@ function Header({ className }) {
                 />
                 <button type="submit">
                     <img
-                        src="src\Assets\SVG\magnifying_glass_tilted_left_flat.svg"
+                        src={magnifyingGlass_icon}
                         alt="magnifying glass icon"
                     />
                 </button>
