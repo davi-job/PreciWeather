@@ -3,6 +3,11 @@ import React from "react";
 import { useContext } from "react";
 import { OWContext } from "../../contexts/OWContext";
 
+import droplet_icon from "/src/Assets/SVG/droplet_flat.svg";
+import sunglasses_icon from "/src/Assets/SVG/smiling_face_with_sunglasses_flat.svg";
+import sunWithFace_icon from "/src/Assets/SVG/sun_with_face_flat.svg";
+import moonWithFace_icon from "/src/Assets/SVG/last_quarter_moon_face_flat.svg";
+
 function GeneralInfoCard() {
     const OWData = useContext(OWContext);
 
@@ -32,7 +37,11 @@ function GeneralInfoCard() {
         <div className="section-info__current__general grid grid-2-cols">
             <div className="section-info-general__column flex flex-column">
                 <div className="section-info-general__info-card grid">
-                    <p className="info-card__icon">💧</p>
+                    <img
+                        src={droplet_icon}
+                        alt="droplet icon"
+                        className="info-card__icon"
+                    />
                     <p className="info-card__title">Humidity</p>
                     <p className="info-card__value">
                         {OWData.current.humidity}%
@@ -40,7 +49,11 @@ function GeneralInfoCard() {
                 </div>
 
                 <div className="section-info-general__info-card grid">
-                    <p className="info-card__icon">😎</p>
+                    <img
+                        src={sunglasses_icon}
+                        alt="droplet icon"
+                        className="info-card__icon"
+                    />
                     <p className="info-card__title">UV Index</p>
                     <p className="info-card__value">{OWData.current.uvi}</p>
                 </div>
@@ -48,13 +61,21 @@ function GeneralInfoCard() {
 
             <div className="section-info-general__column flex flex-column">
                 <div className="section-info-general__info-card grid">
-                    <p className="info-card__icon">🌞</p>
+                    <img
+                        src={sunWithFace_icon}
+                        alt="droplet icon"
+                        className="info-card__icon"
+                    />
                     <p className="info-card__title">Sunrise</p>
                     <p className="info-card__value">{sunrise}</p>
                 </div>
 
                 <div className="section-info-general__info-card grid">
-                    <p className="info-card__icon">☀️</p>
+                    <img
+                        src={moonWithFace_icon}
+                        alt="droplet icon"
+                        className="info-card__icon"
+                    />
                     <p className="info-card__title">Sunset</p>
                     <p className="info-card__value">{sunset}</p>
                 </div>

@@ -24,7 +24,12 @@ function Header({ className }) {
                     value={searchValue}
                     onChange={handleSearchChange}
                 />
-                <button type="submit">🔍</button>
+                <button type="submit">
+                    <img
+                        src="src\Assets\SVG\magnifying_glass_tilted_left_flat.svg"
+                        alt="magnifying glass icon"
+                    />
+                </button>
             </form>
         </header>
     );

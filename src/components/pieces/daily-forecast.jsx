@@ -3,9 +3,16 @@ import React from "react";
 import { useContext } from "react";
 import { OWContext } from "../../contexts/OWContext";
 
+import sun_icon from "../../Assets/SVG/sun_flat.svg";
+import clouds_icon from "../../Assets/SVG/sun_behind_large_cloud_flat.svg";
+import rain_icon from "../../Assets/SVG/cloud_with_rain_flat.svg";
+import thunder_icon from "../../Assets/SVG/cloud_with_lightning_flat.svg";
+import snow_icon from "../../Assets/SVG/cloud_with_snow_flat.svg";
+
 function DailyForecast() {
     const OWData = useContext(OWContext);
     let daysData = [];
+    let daysIcons = [];
 
     for (let i = 0; i < OWData.daily.length - 1; i++) {
         let dayInfo = {
@@ -20,6 +27,30 @@ function DailyForecast() {
         daysData.push(dayInfo);
     }
 
+    for (let i = 0; i < daysData.length; i++) {
+        switch (OWData.daily[i].weather[0].main) {
+            case "Clear":
+                daysIcons[i] = sun_icon;
+                break;
+            case "Clouds":
+                daysIcons[i] = clouds_icon;
+                break;
+            case "Rain":
+                daysIcons[i] = rain_icon;
+                break;
+            case "Thunderstorm":
+                daysIcons[i] = thunder_icon;
+                break;
+            case "Snow":
+                daysIcons[i] = snow_icon;
+                break;
+            default:
+                daysIcons[i] = sun_icon;
+        }
+    }
+
+    console.table(daysData);
+
     return (
         <div className="daily-forecast">
             <ul className="daily-forecast__list flex">
@@ -29,7 +60,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[0]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">
@@ -49,7 +80,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[1]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">
@@ -69,7 +100,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[2]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">
@@ -89,7 +120,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[3]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">
@@ -109,7 +140,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[4]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">
@@ -129,7 +160,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[5]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">
@@ -149,7 +180,7 @@ function DailyForecast() {
                     </div>
 
                     <div className="daily-forecast__item__icon">
-                        {<img src="" alt="" /> && "☀️"}
+                        {<img src={daysIcons[6]} alt="" />}
                     </div>
 
                     <div className="daily-forecast__item__temp flex">

@@ -9,7 +9,7 @@
   border-radius: 18px;
   margin-bottom: 6rem;
 }
-.section-current img {
+.section-current .section-current__bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,6 +23,8 @@
 }
 .section-current .section-current__main-content .section-current__content__icon {
   font-size: 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
   margin-left: 0.8rem;
   filter: contrast(0) brightness(2);
 }

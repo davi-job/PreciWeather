@@ -15,6 +15,7 @@ function InfoSection({ className }) {
 
             <div className="section-info__forecast grid">
                 <TempGraph />
+
                 <DailyForecast />
             </div>
         </section>

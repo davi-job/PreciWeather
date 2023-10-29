@@ -47,7 +47,7 @@
     }
 
     button {
-        padding: 0.4rem 1.15rem;
+        padding: 0.2rem 1.15rem;
 
         background-color: transparent;
         color: var(--primary);
@@ -58,6 +58,14 @@
         cursor: pointer;
 
         transition: all 0.2s ease-in-out;
+
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
     button:hover {
