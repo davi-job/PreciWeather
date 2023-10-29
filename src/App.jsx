@@ -19,6 +19,7 @@ function App() {
             {isDataFetched && (
                 <>
                     <main className="app-container container flex flex-column flex-center ">
+                        <div className="app-cover fade-out"></div>
                         <Header />
                         <CurrentSection />
                         <InfoSection />
