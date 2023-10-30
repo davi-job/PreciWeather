@@ -7,6 +7,7 @@ import "./styles/css/header.css";
 import "./styles/css/sectionCurrent.css";
 import "./styles/css/sectionInfo.css";
 
+import AppWrapper from "./components/app-wrapper.jsx";
 import Header from "./components/header";
 import CurrentSection from "./components/section-current";
 import InfoSection from "./components/section-info";
@@ -19,11 +20,15 @@ function App() {
             {isDataFetched && (
                 <>
                     <main className="app-container container flex flex-column flex-center ">
-                        <div className="app-cover fade-out"></div>
-                        <Header />
-                        <CurrentSection />
-                        <InfoSection />
-                        <p className="ow-tag">Data from openweathermap.org</p>
+                        <AppWrapper>
+                            <div className="app-cover fade-out"></div>
+                            <Header />
+                            <CurrentSection />
+                            <InfoSection />
+                            <p className="ow-tag">
+                                Data from openweathermap.org
+                            </p>
+                        </AppWrapper>
                     </main>
                 </>
             )}
