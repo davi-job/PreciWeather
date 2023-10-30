@@ -14,6 +14,8 @@ function DailyForecast() {
     let daysData = [];
     let daysIcons = [];
 
+    // Getting data for each day
+
     for (let i = 0; i < OWData.daily.length - 1; i++) {
         let dayInfo = {
             day: new Date(OWData.daily[i].dt * 1000).toLocaleString("en-US", {
@@ -26,6 +28,8 @@ function DailyForecast() {
 
         daysData.push(dayInfo);
     }
+
+    // Setting icons for each day
 
     for (let i = 0; i < daysData.length; i++) {
         switch (OWData.daily[i].weather[0].main) {
