@@ -49,8 +49,6 @@ function DailyForecast() {
         }
     }
 
-    console.table(daysData);
-
     return (
         <div className="daily-forecast">
             <ul className="daily-forecast__list flex">

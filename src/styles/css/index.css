@@ -5,8 +5,8 @@
 
     --text: #2f3542;
 
-    --clear-primary: ##ff8a9c;
-    --clear-secondary: ##fffdea;
+    --clear-primary: #ff8a9c;
+    --clear-secondary: #fff7b0;
     --clear-bg: #fff;
 
     --clouds-primary: #f1f2f6;
@@ -117,33 +117,38 @@ body {
     justify-content: flex-start;
 }
 
-.app-container.clear {
+.app-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.app-wrapper.Clear {
     --primary: #ef8393;
     --secondary: ##fffdea;
     --background: #fff;
 }
 
-.app-container.clouds {
-    --primary: #f1f2f6;
-    --secondary: #2f3542;
+.app-wrapper.Clouds {
+    --primary: #ff7700;
+    --secondary: #ffe942;
     --background: #f1f2f6;
 }
 
-.app-container.rain {
-    --primary: #f1f2f6;
-    --secondary: #2f3542;
+.app-wrapper.Rain {
+    --primary: #003aad;
+    --secondary: #84c6ff;
     --background: #f9f8fe;
 }
 
-.app-container.thunderstorm {
-    --primary: #f1f2f6;
-    --secondary: #2f3542;
+.app-wrapper.Thunderstorm {
+    --primary: #040082;
+    --secondary: #3474ff;
     --background: #f1f2f6;
 }
 
-.app-container.snow {
-    --primary: #f1f2f6;
-    --secondary: #2f3542;
+.app-wrapper.Snow {
+    --primary: #898989;
+    --secondary: #c1c1c1;
     --background: #fff;
 }
 
@@ -156,6 +161,8 @@ body {
     background-color: var(--background);
 
     overflow: hidden;
+
+    pointer-events: none;
 
     z-index: 99;
 }

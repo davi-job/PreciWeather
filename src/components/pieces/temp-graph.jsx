@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { OWContext } from "/src/contexts/OWContext.jsx";
 
 import {
@@ -12,20 +12,40 @@ import {
 
 import React from "react";
 
-// Get primary and secondary color variables from css file
-
-let primaryColor = getComputedStyle(document.documentElement).getPropertyValue(
-    "--primary"
-);
-
-let secondaryColor = getComputedStyle(
-    document.documentElement
-).getPropertyValue("--secondary");
-
 // Element
 
 function TempGraph() {
     let OWData = useContext(OWContext);
+
+    let primaryColor, secondaryColor;
+
+    // Set primary and secondary color values based on weather condition
+
+    switch (OWData.current.weather[0].main) {
+        case "Clear":
+            primaryColor = "#ff8a9c";
+            secondaryColor = "#fff7b0";
+            break;
+        case "Clouds":
+            primaryColor = "#ff7700";
+            secondaryColor = "#ffe942";
+            break;
+        case "Rain":
+            primaryColor = "#003aad";
+            secondaryColor = "#84c6ff";
+            break;
+        case "Thunderstorm":
+            primaryColor = "#040082";
+            secondaryColor = "#3474ff";
+            break;
+        case "Snow":
+            primaryColor = "#898989";
+            secondaryColor = "#c1c1c1";
+            break;
+        default:
+            primaryColor = "#0099ff";
+            secondaryColor = "#8ad6ff";
+    }
 
     // Chart data
 
