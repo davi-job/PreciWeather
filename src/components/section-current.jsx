@@ -10,6 +10,8 @@ import snow_icon from "../assets/SVG/cloud_with_snow_flat.svg";
 function CurrentSection({ className }) {
     const OWData = useContext(OWContext);
 
+    // Setting icon for current weather
+
     let activeIcon;
     switch (OWData.current.weather[0].main) {
         case "Clear":
@@ -31,6 +33,8 @@ function CurrentSection({ className }) {
             activeIcon = sun_icon;
     }
 
+    // Setting current time
+
     const [date, setDate] = useState(new Date());
 
     let hour = date.getHours();
@@ -41,6 +45,8 @@ function CurrentSection({ className }) {
     if (min < 10) {
         min = `0${min}`;
     }
+
+    // Updating time every second
 
     useEffect(() => {
         let timer = setInterval(() => setDate(new Date()), 1000);

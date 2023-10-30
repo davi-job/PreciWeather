@@ -17,9 +17,9 @@ import React from "react";
 function TempGraph() {
     let OWData = useContext(OWContext);
 
-    let primaryColor, secondaryColor;
-
     // Set primary and secondary color values based on weather condition
+
+    let primaryColor, secondaryColor;
 
     switch (OWData.current.weather[0].main) {
         case "Clear":
@@ -53,43 +53,38 @@ function TempGraph() {
         {
             hour: new Date(OWData.hourly[1].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[1].temp),
-            humidity: OWData.hourly[1].humidity,
         },
         {
             hour: new Date(OWData.hourly[2].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[2].temp),
-            humidity: OWData.hourly[2].humidity,
         },
         {
             hour: new Date(OWData.hourly[3].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[3].temp),
-            humidity: OWData.hourly[3].humidity,
         },
         {
             hour: new Date(OWData.hourly[4].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[4].temp),
-            humidity: OWData.hourly[4].humidity,
         },
         {
             hour: new Date(OWData.hourly[5].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[5].temp),
-            humidity: OWData.hourly[5].humidity,
         },
         {
             hour: new Date(OWData.hourly[6].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[6].temp),
-            humidity: OWData.hourly[6].humidity,
         },
         {
             hour: new Date(OWData.hourly[7].dt * 1000).getHours() + "h",
             temp: Math.floor(OWData.hourly[7].temp),
-            humidity: OWData.hourly[7].humidity,
         },
     ];
 
     // find the lowest and highest temp from data objects
+
     let lowestTemp = data[0].temp;
     let highestTemp = data[0].temp;
+
     for (let i = 0; i < data.length; i++) {
         if (data[i].temp < lowestTemp) {
             lowestTemp = data[i].temp;
