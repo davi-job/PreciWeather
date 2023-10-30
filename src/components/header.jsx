@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import magnifyingGlass_icon from "../Assets/SVG/magnifying_glass_tilted_left_flat.svg";
 
@@ -11,8 +11,31 @@ function Header({ className }) {
 
     const handleSearchSubmit = (event) => {
         event.preventDefault();
-        // Do something with searchValue, like search for weather data
     };
+
+    // Google places autocomplete //////////
+
+    const autoCompleteRef = useRef();
+    const inputRef = useRef();
+
+    const options = {
+        fields: ["address_components", "geometry"],
+        types: ["locality"],
+    };
+
+    useEffect(() => {
+        autoCompleteRef.current = new window.google.maps.places.Autocomplete(
+            inputRef.current,
+            options
+        );
+
+        autoCompleteRef.current.addListener("place_changed", async function () {
+            const place = await autoCompleteRef.current.getPlace();
+            console.log({ place });
+        });
+    }, []);
+
+    ////////////////////////////////////////
 
     return (
         <header
@@ -22,16 +45,11 @@ function Header({ className }) {
             <form onSubmit={handleSearchSubmit}>
                 <input
                     type="text"
+                    ref={inputRef}
                     placeholder="Enter city name..."
                     value={searchValue}
                     onChange={handleSearchChange}
                 />
-                <button type="submit">
-                    <img
-                        src={magnifyingGlass_icon}
-                        alt="magnifying glass icon"
-                    />
-                </button>
             </form>
         </header>
     );
