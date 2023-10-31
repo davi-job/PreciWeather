@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { OWContext } from "../contexts/OWContext.jsx";
 
 function AppWrapper({ children, className }) {
-    let OWData = useContext(OWContext);
+    let { OWData } = useContext(OWContext);
 
     let currentWeather = OWData.current.weather[0].main;
 

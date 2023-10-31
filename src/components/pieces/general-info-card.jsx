@@ -9,7 +9,7 @@ import sunWithFace_icon from "/src/Assets/SVG/sun_with_face_flat.svg";
 import moonWithFace_icon from "/src/Assets/SVG/last_quarter_moon_face_flat.svg";
 
 function GeneralInfoCard() {
-    const OWData = useContext(OWContext);
+    const { OWData } = useContext(OWContext);
 
     // Sunrise time treatment
 

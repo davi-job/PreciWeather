@@ -8,7 +8,7 @@ import thunder_icon from "../assets/SVG/cloud_with_lightning_flat.svg";
 import snow_icon from "../assets/SVG/cloud_with_snow_flat.svg";
 
 function CurrentSection({ className }) {
-    const OWData = useContext(OWContext);
+    const { OWData, localName } = useContext(OWContext);
 
     // Setting icon for current weather
 
@@ -78,7 +78,7 @@ function CurrentSection({ className }) {
                     <span>{Math.floor(OWData.current.temp)}</span>°
                 </h2>
                 <p className="section-current__content__description">
-                    Juazeiro do Norte, CE
+                    {localName}
                 </p>
             </div>
 
