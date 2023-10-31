@@ -16,7 +16,11 @@ function RainfallInfoCard() {
         }
     }
 
-    rainfall = rainfall.toFixed(2);
+    if (rainfall > 0) {
+        rainfall = rainfall.toFixed(2);
+    } else {
+        rainfall = 0;
+    }
 
     // calculate sum of the snowfall for the next 7 days
 
@@ -28,7 +32,11 @@ function RainfallInfoCard() {
         }
     }
 
-    snowfall = snowfall.toFixed(2);
+    if (snowfall > 0) {
+        snowfall = snowfall.toFixed(2);
+    } else {
+        snowfall = 0;
+    }
 
     return (
         <div className="section-info__current__rainfall flex flex-center">
