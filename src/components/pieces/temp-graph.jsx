@@ -15,7 +15,7 @@ import React from "react";
 // Element
 
 function TempGraph() {
-    let OWData = useContext(OWContext);
+    let { OWData } = useContext(OWContext);
 
     // Set primary and secondary color values based on weather condition
 

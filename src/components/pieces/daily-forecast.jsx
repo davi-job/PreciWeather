@@ -10,7 +10,7 @@ import thunder_icon from "../../Assets/SVG/cloud_with_lightning_flat.svg";
 import snow_icon from "../../Assets/SVG/cloud_with_snow_flat.svg";
 
 function DailyForecast() {
-    const OWData = useContext(OWContext);
+    const { OWData } = useContext(OWContext);
     let daysData = [];
     let daysIcons = [];
 

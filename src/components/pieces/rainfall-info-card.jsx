@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { OWContext } from "../../contexts/OWContext";
 
 function RainfallInfoCard() {
-    const OWData = useContext(OWContext);
+    const { OWData } = useContext(OWContext);
 
     // calculate sum of the rainfall for the next 7 days
 

@@ -7,14 +7,25 @@ let lon = -39.320131;
 
 export const OWProvider = ({ children, setFetched }) => {
     const [OWData, setOWData] = useState({});
+    const [local, setLocal] = useState({
+        lat: lat,
+        lon: lon,
+    });
+    const [localName, setLocalName] = useState("Juazeiro do Norte, CE");
 
     useEffect(() => {
         getOWData();
     }, []);
 
+    useEffect(() => {
+        getOWData();
+    }, [local]);
+
     const getOWData = async () => {
         const response = await fetch(
-            `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${
+            `https://api.openweathermap.org/data/3.0/onecall?lat=${
+                local.lat
+            }&lon=${local.lon}&units=metric&appid=${
                 import.meta.env.VITE_OPEN_WEATHER_API_KEY
             }`
         );
@@ -23,5 +34,11 @@ export const OWProvider = ({ children, setFetched }) => {
         setOWData(jsonData);
     };
 
-    return <OWContext.Provider value={OWData}>{children}</OWContext.Provider>;
+    return (
+        <OWContext.Provider
+            value={{ OWData, localName, setLocalName, setLocal }}
+        >
+            {children}
+        </OWContext.Provider>
+    );
 };
