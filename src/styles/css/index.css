@@ -5,24 +5,24 @@
 
     --text: #2f3542;
 
-    --clear-primary: #ff8a9c;
-    --clear-secondary: #fff7b0;
+    --clear-primary: #ef8393;
+    --clear-secondary: #fffdea;
     --clear-bg: #fff;
 
-    --clouds-primary: #f1f2f6;
-    --clouds-secondary: #2f3542;
+    --clouds-primary: #ff7700;
+    --clouds-secondary: #ffe942;
     --clouds-bg: #f1f2f6;
 
-    --rain-primary: #f1f2f6;
-    --rain-secondary: #2f3542;
+    --rain-primary: #003aad;
+    --rain-secondary: #84c6ff;
     --rain-bg: #f9f8fe;
 
-    --thunderstorm-primary: #f1f2f6;
-    --thunderstorm-secondary: #2f3542;
+    --thunderstorm-primary: #040082;
+    --thunderstorm-secondary: #3474ff;
     --thunderstorm-bg: #f1f2f6;
 
-    --snow-primary: #f1f2f6;
-    --snow-secondary: #2f3542;
+    --snow-primary: #898989;
+    --snow-secondary: #c1c1c1;
     --snow-bg: #fff;
 }
 
@@ -93,19 +93,18 @@ body {
     align-items: center;
 }
 
-.ow-tag {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.fade-out {
+    animation: fade-out 0.35s ease-in-out forwards;
+}
 
-    font-size: 1.2rem;
-    font-weight: 600;
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
 
-    opacity: 0.75;
-
-    color: var(--primary);
-
-    padding: 0.6rem 1.2rem;
+    100% {
+        opacity: 0;
+    }
 }
 
 .app-container {
@@ -123,33 +122,33 @@ body {
 }
 
 .app-wrapper.Clear {
-    --primary: #ef8393;
-    --secondary: ##fffdea;
-    --background: #fff;
+    --primary: var(--clear-primary);
+    --secondary: var(--clear-secondary);
+    --background: var(--clear-bg);
 }
 
 .app-wrapper.Clouds {
-    --primary: #ff7700;
-    --secondary: #ffe942;
-    --background: #f1f2f6;
+    --primary: var(--clouds-primary);
+    --secondary: var(--clouds-secondary);
+    --background: var(--clouds-bg);
 }
 
 .app-wrapper.Rain {
-    --primary: #003aad;
-    --secondary: #84c6ff;
-    --background: #f9f8fe;
+    --primary: var(--rain-primary);
+    --secondary: var(--rain-secondary);
+    --background: var(--rain-bg);
 }
 
 .app-wrapper.Thunderstorm {
-    --primary: #040082;
-    --secondary: #3474ff;
-    --background: #f1f2f6;
+    --primary: var(--thunderstorm-primary);
+    --secondary: var(--thunderstorm-secondary);
+    --background: var(--thunderstorm-bg);
 }
 
 .app-wrapper.Snow {
-    --primary: #898989;
-    --secondary: #c1c1c1;
-    --background: #fff;
+    --primary: var(--snow-primary);
+    --secondary: var(--snow-secondary);
+    --background: var(--snow-bg);
 }
 
 .app-cover {
@@ -167,16 +166,17 @@ body {
     z-index: 99;
 }
 
-.fade-out {
-    animation: fade-out 0.35s ease-in-out forwards;
-}
+.ow-tag {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
+    font-size: 1.2rem;
+    font-weight: 600;
 
-    100% {
-        opacity: 0;
-    }
+    opacity: 0.75;
+
+    color: var(--primary);
+
+    padding: 0.6rem 1.2rem;
 }
