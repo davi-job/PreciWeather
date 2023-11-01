@@ -1,0 +1,13 @@
+.pac-container {
+  background-color: #fff;
+  border: 1px solid #898989;
+  border-radius: 4px 4px 12px 12px;
+  box-shadow: none;
+  z-index: 98;
+}
+
+.pac-container::after {
+  display: none;
+}
+
+/*# sourceMappingURL=pac.css.map */

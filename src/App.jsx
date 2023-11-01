@@ -6,6 +6,7 @@ import "./styles/css/index.css";
 import "./styles/css/header.css";
 import "./styles/css/sectionCurrent.css";
 import "./styles/css/sectionInfo.css";
+import "./styles/css/pac.css";
 
 import AppWrapper from "./components/app-wrapper.jsx";
 import Header from "./components/header";
