@@ -45,30 +45,4 @@
     input:focus {
         outline: none;
     }
-
-    button {
-        padding: 0.2rem 1.15rem;
-
-        background-color: transparent;
-        color: var(--primary);
-
-        border: none;
-        border-left: 1px solid transparent;
-
-        cursor: pointer;
-
-        transition: all 0.2s ease-in-out;
-
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 2rem;
-            height: 2rem;
-        }
-    }
-
-    button:hover {
-        border-left: 1px solid var(--primary);
-    }
 }
