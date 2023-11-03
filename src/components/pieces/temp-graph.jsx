@@ -98,7 +98,7 @@ function TempGraph() {
         <div className="temp-graph-section">
             <p className="temp-graph-section__title">Today's temperature</p>
 
-            <ResponsiveContainer width="100%" height={175}>
+            <ResponsiveContainer width="99%" height={175}>
                 <AreaChart
                     data={data}
                     margin={{ top: 50, right: 40, bottom: 0, left: 40 }}

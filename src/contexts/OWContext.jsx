@@ -2,8 +2,8 @@ import { createContext, useState, useEffect } from "react";
 
 export const OWContext = createContext();
 
-let lat = -7.225684;
-let lon = -39.320131;
+let lat = -23.5557714;
+let lon = -46.6395571;
 
 export const OWProvider = ({ children, setFetched }) => {
     const [OWData, setOWData] = useState({});
@@ -11,7 +11,7 @@ export const OWProvider = ({ children, setFetched }) => {
         lat: lat,
         lon: lon,
     });
-    const [localName, setLocalName] = useState("Juazeiro do Norte, CE");
+    const [localName, setLocalName] = useState("São Paulo, SP");
 
     useEffect(() => {
         getOWData();

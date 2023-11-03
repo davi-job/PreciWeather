@@ -1,0 +1,139 @@
+@media screen and (max-width: 71.875em) {
+  .section-info {
+    grid-template-columns: 40fr 60fr;
+    gap: 2.5%;
+  }
+  .daily-forecast__item:last-of-type {
+    display: none;
+  }
+}
+@media screen and (max-width: 62.5em) {
+  .daily-forecast__item:nth-last-child(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 54.6875em) {
+  .header form input {
+    padding: 1.5rem 2rem;
+  }
+  .app-container {
+    padding: 0 3.2rem;
+  }
+  .section-current {
+    margin-bottom: 8rem;
+  }
+  .section-info {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+    justify-content: center;
+  }
+  .section-info .section-info__current {
+    grid-row: 1;
+    grid-column: 1;
+    gap: 3.2rem;
+    flex-direction: row;
+    height: fit-content;
+  }
+  .section-info .section-info__current .section-info__current__general {
+    padding: 0.9rem 0;
+  }
+  .section-info .section-info__current .section-info__current__rainfall {
+    padding: 1.6rem 3.2rem;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    gap: 3.2rem;
+  }
+  .section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__percentage {
+    text-align: left;
+  }
+  .section-info .section-info__forecast {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .section-info .section-info__forecast .daily-forecast__item:last-of-type,
+  .section-info .section-info__forecast .daily-forecast__item:nth-last-child(2) {
+    display: flex;
+  }
+}
+@media screen and (max-width: 43.75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (max-width: 39.0625em) {
+  .header form {
+    display: none;
+  }
+  .header__mobile-search-btn {
+    display: block;
+  }
+  .header__mobile-search {
+    display: flex;
+  }
+  .pac-item {
+    padding: 1.2rem 2.4rem;
+  }
+  .app-container {
+    padding: 0 2.4rem;
+  }
+  .app-container {
+    padding: 0 1.6rem;
+  }
+  .section-info .section-info__current {
+    gap: 2rem;
+  }
+  .section-info .section-info__forecast .daily-forecast__list .daily-forecast__item:last-of-type {
+    display: none;
+  }
+}
+@media screen and (max-width: 32.1875em) {
+  html {
+    font-size: 53.125%;
+  }
+  .section-info .section-info__current {
+    gap: 2rem;
+  }
+  .section-info .section-info__forecast .daily-forecast__list .daily-forecast__item:nth-last-child(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 28.125em) {
+  .section-info .section-info__current {
+    gap: 3.2rem;
+    flex-direction: column;
+  }
+  .section-info .section-info__current .section-info__current__rainfall {
+    width: 100%;
+    flex-direction: row;
+  }
+  .section-info .section-info__current .section-info__current__rainfall .section-info__current__rainfall__percentage {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 25em) {
+  .section-info {
+    gap: 4.6rem;
+  }
+  .section-info .section-info__forecast {
+    gap: 0;
+  }
+  .section-info .section-info__forecast .temp-graph-section {
+    margin-top: -6.4rem;
+  }
+  .section-info .section-info__forecast .daily-forecast__list {
+    margin-top: -3.2rem;
+    margin-bottom: 2.4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .section-info .section-info__forecast .daily-forecast__list .daily-forecast__item:last-of-type,
+  .section-info .section-info__forecast .daily-forecast__list .daily-forecast__item:nth-last-child(2) {
+    display: flex;
+  }
+  .section-info .section-info__forecast .daily-forecast__list .daily-forecast__item:nth-child(5)::before {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=queries.css.map */
