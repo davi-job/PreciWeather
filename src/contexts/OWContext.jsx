@@ -4,11 +4,14 @@ export const OWContext = createContext();
 
 export const OWProvider = ({ children, setFetched }) => {
     const [OWData, setOWData] = useState({});
+
+    const [isFirstRender, setIsFirstRender] = useState(true);
+
+    const [localName, setLocalName] = useState("");
     const [local, setLocal] = useState({
         lat: 0,
         lon: 0,
     });
-    const [localName, setLocalName] = useState("");
 
     // get name, lat and lng from browser
 
@@ -29,6 +32,8 @@ export const OWProvider = ({ children, setFetched }) => {
                 let dataLat = data.results[0].geometry.location.lat;
                 let dataLng = data.results[0].geometry.location.lng;
 
+                console.log(data);
+
                 for (
                     let i = 0;
                     i < data.results[0].address_components.length;
@@ -36,7 +41,9 @@ export const OWProvider = ({ children, setFetched }) => {
                 ) {
                     if (
                         data.results[0].address_components[i].types[0] ===
-                        "administrative_area_level_2"
+                            "administrative_area_level_2" ||
+                        data.results[0].address_components[i].types[0] ===
+                            "administrative_area_level_4"
                     ) {
                         city = data.results[0].address_components[i].long_name;
                     }
@@ -53,6 +60,21 @@ export const OWProvider = ({ children, setFetched }) => {
                 setLocal({ lat: dataLat, lon: dataLng });
 
                 getOWData(dataLat, dataLng);
+
+                if (
+                    city === undefined ||
+                    state === undefined ||
+                    dataLat === undefined ||
+                    dataLng === undefined ||
+                    data.results[0].address_components.length === 0 ||
+                    data.results[0].address_components === undefined
+                ) {
+                    alert(
+                        "Error getting location, setting location to Default"
+                    );
+
+                    error();
+                }
             });
     };
 
@@ -62,7 +84,9 @@ export const OWProvider = ({ children, setFetched }) => {
         setLocalName("São Paulo, SP");
         setLocal({ lat: -23.533773, lon: -46.62529 });
 
-        alert("Default Location set to São Paulo, SP");
+        alert("Location set to São Paulo, SP");
+
+        setIsFirstRender(true);
     };
 
     // get data in first render
@@ -75,10 +99,14 @@ export const OWProvider = ({ children, setFetched }) => {
         fetchData();
     }, []);
 
-    // get data when local changes
+    // get data when local changes && not in first render
 
     useEffect(() => {
-        getOWData(local.lat, local.lon);
+        if (!isFirstRender) {
+            getOWData(local.lat, local.lon);
+        } else {
+            setIsFirstRender(false);
+        }
     }, [local]);
 
     // get data from openweathermap.org
@@ -90,14 +118,14 @@ export const OWProvider = ({ children, setFetched }) => {
             }`
         );
         const jsonData = await response.json();
-        setFetched(true);
         setOWData(jsonData);
+        setFetched(true);
     };
 
     // get current place from browser
 
-    const getCurrentPlace = () => {
-        navigator.geolocation.getCurrentPosition(success, error);
+    const getCurrentPlace = async () => {
+        await navigator.geolocation.getCurrentPosition(success, error);
     };
 
     return (
