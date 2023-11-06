@@ -84,9 +84,9 @@ export const OWProvider = ({ children, setFetched }) => {
         setLocalName("São Paulo, SP");
         setLocal({ lat: -23.533773, lon: -46.62529 });
 
-        alert("Location set to São Paulo, SP");
+        alert("Permission not granted! Location set to São Paulo, SP");
 
-        setIsFirstRender(true);
+        getOWData(-23.533773, -46.62529);
     };
 
     // get data in first render
