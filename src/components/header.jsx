@@ -30,6 +30,8 @@ function Header({ className }) {
         types: ["locality"],
     };
 
+    // Desktop search
+
     useEffect(() => {
         autoCompleteRef.current = new window.google.maps.places.Autocomplete(
             inputRef.current,
@@ -56,12 +58,10 @@ function Header({ className }) {
 
             setLocalName(`${place.address_components[0].long_name}, ${state}`);
             setLocal({ lat: lat, lon: lng });
-
-            console.log(`${place.address_components[0].long_name}, ${state}`);
-            console.log(`Lat: ${place.geometry.location.lat()}`);
-            console.log(`Lng: ${place.geometry.location.lng()}`);
         });
     }, []);
+
+    // Mobile search
 
     useEffect(() => {
         mobileCompleteRef.current = new window.google.maps.places.Autocomplete(

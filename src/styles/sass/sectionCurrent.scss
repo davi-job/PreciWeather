@@ -1,5 +1,5 @@
 .section-current {
-    background-color: var(--primary);
+    // background-color: var(--primary);
     color: #fff;
 
     position: relative;
@@ -14,17 +14,29 @@
 
     margin-bottom: 6rem;
 
-    .section-current__bg {
+    .section-current__bg-box {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
 
-        width: 100%;
+        overflow: hidden;
+
         height: 100%;
+        width: 100%;
 
         border-radius: 18px;
 
         z-index: -1;
+
+        .section-current__bg-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
     }
 
     .section-current__main-content {

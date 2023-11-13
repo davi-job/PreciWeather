@@ -60,6 +60,9 @@
   html {
     font-size: 56.25%;
   }
+  .section-current .section-current__bg-box .section-current__bg-img {
+    right: -5%;
+  }
 }
 @media screen and (max-width: 39.0625em) {
   .header form {
@@ -91,6 +94,9 @@
   html {
     font-size: 53.125%;
   }
+  .section-current .section-current__bg-box .section-current__bg-img {
+    right: -45%;
+  }
   .section-info .section-info__current {
     gap: 2rem;
   }
@@ -99,6 +105,10 @@
   }
 }
 @media screen and (max-width: 28.125em) {
+  .section-current .section-current__bg-box .section-current__bg-img {
+    height: 105%;
+    right: -55%;
+  }
   .section-info .section-info__current {
     gap: 3.2rem;
     flex-direction: column;

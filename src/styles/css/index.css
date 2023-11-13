@@ -1,28 +1,28 @@
 :root {
-    --primary: #0099ff;
-    --secondary: #8ad6ff;
+    --primary: #4bede6;
+    --secondary: #a1e6e3;
     --background: #fff;
 
     --text: #2f3542;
 
-    --clear-primary: #ef8393;
-    --clear-secondary: #fffdea;
+    --clear-primary: #4bede6;
+    --clear-secondary: #a1e6e3;
     --clear-bg: #fff;
 
-    --clouds-primary: #ff7700;
-    --clouds-secondary: #ffe942;
+    --clouds-primary: #3e7dd3;
+    --clouds-secondary: #adbacc;
     --clouds-bg: #f1f2f6;
 
-    --rain-primary: #003aad;
-    --rain-secondary: #84c6ff;
+    --rain-primary: #243093;
+    --rain-secondary: #70738c;
     --rain-bg: #f9f8fe;
 
-    --thunderstorm-primary: #040082;
-    --thunderstorm-secondary: #3474ff;
+    --thunderstorm-primary: #11053a;
+    --thunderstorm-secondary: #252133;
     --thunderstorm-bg: #f1f2f6;
 
-    --snow-primary: #898989;
-    --snow-secondary: #c1c1c1;
+    --snow-primary: #57caf9;
+    --snow-secondary: #daebf2;
     --snow-bg: #fff;
 }
 
