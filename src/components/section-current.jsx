@@ -100,7 +100,7 @@ function CurrentSection({ className }) {
                 style={{
                     color:
                         OWData.current.weather[0].main === "Snow"
-                            ? "#57caf9"
+                            ? "#029fd8"
                             : "",
                 }}
             >
@@ -123,7 +123,7 @@ function CurrentSection({ className }) {
                 style={{
                     color:
                         OWData.current.weather[0].main === "Snow"
-                            ? "#57caf9"
+                            ? "#029fd8"
                             : "",
                 }}
             >

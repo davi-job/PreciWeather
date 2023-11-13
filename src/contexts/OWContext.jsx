@@ -117,8 +117,6 @@ export const OWProvider = ({ children, setFetched }) => {
         );
         const jsonData = await response.json();
 
-        jsonData.current.weather[0].main = "Snow";
-
         setOWData(jsonData);
         setFetched(true);
     };
