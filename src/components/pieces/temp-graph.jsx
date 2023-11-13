@@ -23,8 +23,8 @@ function TempGraph() {
 
     switch (OWData.current.weather[0].main) {
         case "Clear":
-            primaryColor = "#4bede6";
-            secondaryColor = "#a1e6e3";
+            primaryColor = "#00b1e3  ";
+            secondaryColor = "#4cb2cf   ";
             break;
         case "Clouds":
             primaryColor = "#3e7dd3";
@@ -39,12 +39,12 @@ function TempGraph() {
             secondaryColor = "#252133";
             break;
         case "Snow":
-            primaryColor = "#57caf9";
-            secondaryColor = "#daebf2";
+            primaryColor = "#0388b7 ";
+            secondaryColor = "#6292a3 ";
             break;
         default:
-            primaryColor = "#4bede6";
-            secondaryColor = "#a1e6e3";
+            primaryColor = "#00b1e3 ";
+            secondaryColor = "#4cb2cf ";
     }
 
     // Chart data

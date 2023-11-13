@@ -1,12 +1,12 @@
 :root {
-    --primary: #4bede6;
-    --secondary: #a1e6e3;
+    --primary: #00b1e3;
+    --secondary: #0388b7;
     --background: #fff;
 
     --text: #2f3542;
 
-    --clear-primary: #4bede6;
-    --clear-secondary: #a1e6e3;
+    --clear-primary: #00b1e3;
+    --clear-secondary: #0388b7;
     --clear-bg: #fff;
 
     --clouds-primary: #3e7dd3;
@@ -21,8 +21,8 @@
     --thunderstorm-secondary: #252133;
     --thunderstorm-bg: #f1f2f6;
 
-    --snow-primary: #57caf9;
-    --snow-secondary: #daebf2;
+    --snow-primary: #0388b7;
+    --snow-secondary: #6292a3;
     --snow-bg: #fff;
 }
 
