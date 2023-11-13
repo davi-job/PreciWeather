@@ -37,7 +37,7 @@
 ## Screenshots 
 
 Clear Weather:
-![PreciWeather - Clear](https://github.com/davi-job/PreciWeather/assets/74321835/ff8f9da0-ce13-497e-9f92-2e14c2e9f10a)
+![PreciWeather - Clear](https://github.com/davi-job/PreciWeather/assets/74321835/019f1965-8bd1-44ad-8b02-842731b34b64)
 
 Clouds:
 ![PreciWeather - Clouds](https://github.com/davi-job/PreciWeather/assets/74321835/53da5740-e2b8-41f8-9cd0-28fd8742f42e)
