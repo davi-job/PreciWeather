@@ -118,6 +118,7 @@ function Header({ className }) {
                 <button
                     className="header__mobile-search-btn"
                     onClick={() => setMobileSearchOpened(true)}
+                    aria-label="Search for a city"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
