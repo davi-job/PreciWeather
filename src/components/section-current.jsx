@@ -97,7 +97,12 @@ function CurrentSection({ className }) {
 
             <div
                 className="section-current__main-content flex flex-column"
-                // style={{ color: bg_img === "snowy" ? "#57caf9" : "" }}
+                style={{
+                    color:
+                        OWData.current.weather[0].main === "Snow"
+                            ? "#57caf9"
+                            : "",
+                }}
             >
                 <img
                     src={activeIcon}
@@ -115,7 +120,12 @@ function CurrentSection({ className }) {
 
             <div
                 className="section-current__complementary_content flex flex-column"
-                // style={{ color: bg_img === "snowy" ? "#57caf9" : "" }}
+                style={{
+                    color:
+                        OWData.current.weather[0].main === "Snow"
+                            ? "#57caf9"
+                            : "",
+                }}
             >
                 <p className="section-current__complementary_content__time">
                     {hour}:{min}
