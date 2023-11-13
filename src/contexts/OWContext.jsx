@@ -32,8 +32,6 @@ export const OWProvider = ({ children, setFetched }) => {
                 let dataLat = data.results[0].geometry.location.lat;
                 let dataLng = data.results[0].geometry.location.lng;
 
-                console.log(data);
-
                 for (
                     let i = 0;
                     i < data.results[0].address_components.length;
@@ -118,6 +116,7 @@ export const OWProvider = ({ children, setFetched }) => {
             }`
         );
         const jsonData = await response.json();
+
         setOWData(jsonData);
         setFetched(true);
     };

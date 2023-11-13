@@ -7,31 +7,53 @@ import rain_icon from "../assets/SVG/cloud_with_rain_flat.svg";
 import thunder_icon from "../assets/SVG/cloud_with_lightning_flat.svg";
 import snow_icon from "../assets/SVG/cloud_with_snow_flat.svg";
 
+import clear_bg from "../assets/Img/clear.webp";
+import cloudy_bg from "../assets/Img/cloudy.webp";
+import rainy_bg from "../assets/Img/rainy.webp";
+import thunderstorm_bg from "../assets/Img/thunderstorm.webp";
+import snowy_bg from "../assets/Img/snowy.webp";
+
 function CurrentSection({ className }) {
     const { OWData, localName } = useContext(OWContext);
 
     // Setting icon for current weather
 
-    let activeIcon;
+    const [activeIcon, setActiveIcon] = useState(sun_icon);
+    const [bg_img, setBgImg] = useState("clear");
+
+    let icon = sun_icon;
+    let bg = "clear";
+
     switch (OWData.current.weather[0].main) {
         case "Clear":
-            activeIcon = sun_icon;
+            icon = sun_icon;
+            bg = clear_bg;
             break;
         case "Clouds":
-            activeIcon = clouds_icon;
+            icon = clouds_icon;
+            bg = cloudy_bg;
             break;
         case "Rain":
-            activeIcon = rain_icon;
+            icon = rain_icon;
+            bg = rainy_bg;
             break;
         case "Thunderstorm":
-            activeIcon = thunder_icon;
+            icon = thunder_icon;
+            bg = thunderstorm_bg;
             break;
         case "Snow":
-            activeIcon = snow_icon;
+            icon = snow_icon;
+            bg = snowy_bg;
             break;
         default:
-            activeIcon = sun_icon;
+            icon = sun_icon;
+            bg = clear_bg;
     }
+
+    useEffect(() => {
+        setActiveIcon(icon);
+        setBgImg(bg);
+    }, [OWData]);
 
     // Setting current time
 
@@ -65,9 +87,18 @@ function CurrentSection({ className }) {
 
     return (
         <div className={`section-current flex ${className ? className : ""}`}>
-            <img className="section-current__bg" src="" alt="" />
+            <div className="section-current__bg-box">
+                <img
+                    className="section-current__bg-img"
+                    src={bg_img}
+                    alt="weather_bg"
+                />
+            </div>
 
-            <div className="section-current__main-content flex flex-column">
+            <div
+                className="section-current__main-content flex flex-column"
+                // style={{ color: bg_img === "snowy" ? "#57caf9" : "" }}
+            >
                 <img
                     src={activeIcon}
                     alt="temperature icon"
@@ -82,7 +113,10 @@ function CurrentSection({ className }) {
                 </p>
             </div>
 
-            <div className="section-current__complementary_content flex flex-column">
+            <div
+                className="section-current__complementary_content flex flex-column"
+                // style={{ color: bg_img === "snowy" ? "#57caf9" : "" }}
+            >
                 <p className="section-current__complementary_content__time">
                     {hour}:{min}
                 </p>

@@ -94,6 +94,14 @@
     html {
         font-size: calc((9 / 16) * 100%);
     }
+
+    .section-current {
+        .section-current__bg-box {
+            .section-current__bg-img {
+                right: -5%;
+            }
+        }
+    }
 }
 
 // 625px in em
@@ -147,6 +155,14 @@
         font-size: calc((8.5 / 16) * 100%);
     }
 
+    .section-current {
+        .section-current__bg-box {
+            .section-current__bg-img {
+                right: -45%;
+            }
+        }
+    }
+
     .section-info {
         .section-info__current {
             gap: 2rem;
@@ -165,6 +181,15 @@
 // 450 in em
 
 @media screen and (max-width: 28.125em) {
+    .section-current {
+        .section-current__bg-box {
+            .section-current__bg-img {
+                height: 105%;
+                right: -55%;
+            }
+        }
+    }
+
     .section-info {
         .section-info__current {
             gap: 3.2rem;
